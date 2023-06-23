@@ -219,7 +219,7 @@ async def recomendacion(titulo: str):
 def recomendacion_previo():
     global cosine_sim, df_ml, indices
     # De las caracteristicas de genero, actor, director y overview
-    nro_registros = 5000
+    nro_registros = 2000
     features = ['_genres', 'director', 'actor', 'overview', 'title']
     df_ml = df[features].head(nro_registros)
     df_ml = df_ml.dropna(how='any', subset=features)
