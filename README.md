@@ -7,6 +7,9 @@ Sistema de Recomendación, usando Machine Learning, permite recomendar película
 - "EDA_ML_Miguel_Ramos.pynb": notebook proceso EDA y ML
 - "main.py": API funciones
 - "index.html": interfaz web amigable para usar el API
+# API
+Se creo siete funciones de consulta, usando FastApi y para deploy Render:
+![Image text](https://github.com/miguelramoscanari/sistema-recomendacion-movies/blob/main/web_api.png)
 
 # Proceso ETL
 Lo relevenante de este proceso fue convertir columna de lista de diccionarios a string, de las siguientes:
@@ -32,13 +35,3 @@ Tareas realizadas en EDA
 Para este sistema de recomendacion, se uso Contenido basado en filtro. 
 El contenido de la pelicula(reparto, descripcion, director, genero) se utiliza para encontrar similitud con otra peliculas. 
 Entonces se recomienda las peliculas que tienen mas probabilidadas de ser similares
-
-# API
-Se creo siete funciones de consulta, usando FastApi y para deploy Render:
-- Películas en el mes consultado (Mes)
-- Películas en el día consultado (Dia)
-- Pelicula, año y score (titulo)
-- Pelicula, votos y promedio (titulo)
-- Películas por actor (nombre_actor)
-- Peliculas por director (nombre_director)
-- Recomendaciones de películas (titulo)
