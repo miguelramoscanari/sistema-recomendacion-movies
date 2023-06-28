@@ -34,11 +34,6 @@ async def startup():
     df = pd.read_csv(r'./Dataset/movies_final.zip', parse_dates=['release_date'])
     recomendacion_previo()
 
-#función para que reconozca mi servidor local
-@app.get('/')
-async def index():
-    return {'API realizada por Miguel Angel Ramos Cañari'}
-
 @app.get('/about/')
 async def about():
     return {'Proyecto individual de la cohorte partime 01 de Data Science'}
