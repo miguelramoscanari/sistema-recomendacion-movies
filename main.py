@@ -19,7 +19,8 @@ deactivate -- salir
 '''
 
 #Importación de las librerías necesarias.
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
 import pandas as pd
 
 #Le doy a mi FastApi un título, una descripción y una versión.
@@ -33,6 +34,12 @@ async def startup():
     global df
     df = pd.read_csv(r'./Dataset/movies_final.zip', parse_dates=['release_date'])
     recomendacion_previo()
+
+#Ruta para el archivo index.html
+@app.get('/', response_class=HTMLResponse, tags=['Index'])
+async def read_index_html():
+    with open("index.html") as f:
+        return f.read()
 
 @app.get('/about/')
 async def about():
@@ -264,7 +271,5 @@ def recomendacion_previo():
 
     # Restablece el indice de nuestro Dataframe principal y construyo el mapeo inverso como antes
     df_ml = df_ml.reset_index()
-    indices = pd.Series(df_ml.index, index=df_ml['title'].str.lower())
-
-                        
+    indices = pd.Series(df_ml.index, index=df_ml['title'].str.lower())           
     
