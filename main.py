@@ -27,10 +27,6 @@ app = FastAPI(title='Proyecto Individual ML OPS Miguel Ramos',
             description='Partime 01',
             version='1.0.1')
 
-@app.get('/')
-async def read_root():
-    return {'Mi primera API'}
-
 #Primera función donde la API va a tomar mi dataframe para las consultas.    
 @app.on_event('startup')
 async def startup():
