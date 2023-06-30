@@ -7,10 +7,15 @@ Sistema de Recomendación, usando Machine Learning, permite recomendar película
 - "EDA_ML_Miguel_Ramos.pynb": notebook proceso EDA y ML
 - "main.py": API funciones
 - "index.html": interfaz web amigable para usar el API
+
 # API
 Se creo siete funciones de consulta, usando FastApi y para deploy Render:
 ![Image text](https://github.com/miguelramoscanari/sistema-recomendacion-movies/blob/main/web_api.png)
 
+# URLs
+- Deployed Render: https://sistema-recomendacion-movie-miguel-tacna.onrender.com/
+- Video explicativo: https://drive.google.com/file/d/1O3gY7yau5JjxXFFQZYBunzdwkafRYyE3/view?usp=sharing
+- GitHub : https://github.com/miguelramoscanari/sistema-recomendacion-movies
 # Proceso ETL
 Lo relevenante de este proceso fue convertir columna de lista de diccionarios a string, de las siguientes:
 - belongs_to_collection : Un diccionario que indica a que franquicia o serie de películas pertenece la película
